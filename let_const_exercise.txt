@@ -1,0 +1,11 @@
+- What is the difference between var and let?
+    var is function wide and can be redeclared
+    let is block wide and cannot be redeclared
+- What is the difference between var and const?
+    var is function wide, can be redeclared and reassigned
+    const is block wide and cannot be redeclared or reassigned
+- What is the difference between let and const?
+    let can be reassigned
+    const cannot be reassigned
+- What is hoisting?
+    when the variables are moved and declared at the beginning of the execution but not assigned until their original position in the code
