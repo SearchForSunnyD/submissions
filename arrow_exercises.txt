@@ -1,0 +1,5 @@
+const double = arr => arr.map(n => n*2)
+
+ 
+
+const squareAndFindEvens = arr => arr.map(n => n ** 2).filter(n => n % 2 === 0)
