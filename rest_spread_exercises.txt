@@ -1,0 +1,36 @@
+const filterOutOdds = (...args) => args.filter(n => n % 2 === 0)
+
+
+const findMin = (...args) => Math.min(...args)
+
+
+const mergeObjects = (...obj) => ({...obj.reduce((acc, obj) => ({...acc, ...obj}), {})})
+
+const doubleAndReturnArgs = (arr, ...args) => [...arr, ...args.map(n => n * 2)]
+
+function removeRandom(items) {
+    let num = Math.floor(Math.random() * (items.length))
+    return [...items.slice(0, num), ...items.slice(num+1)]
+}
+
+function extend(array1, array2) {
+    return [...array1, ...array2]
+}
+
+function addKeyVal(obj, key, val) {
+    return { ...obj, [key]: val }
+}
+
+function removeKey(obj, key) {
+    let newObj = {...obj}
+    delete newObj[key]
+    return newObj
+}
+
+function combine(obj1, obj2) {
+    return {...obj1, ...obj2}
+}
+
+function update(obj, key, val) {
+    return { ...obj, [key]: val }
+}
