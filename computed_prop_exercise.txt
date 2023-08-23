@@ -1,0 +1,41 @@
+const createInstructor = function(firstName, lastName){return {firstName, lastName}}
+
+ 
+
+const favoriteNumber = 42
+
+const instructor = {firstName : 'Colt', [favoriteNumber] : 'That is my favorite!'}
+
+ 
+
+const instructor = {
+
+    firstName : 'Colt',
+
+    sayHi(){
+
+        return 'hi'
+
+    },
+
+    sayBye(){
+
+        return this.firstName+' says bye!'
+
+    }
+
+}
+
+ 
+
+const createAnimal = function(species,verb,sound){
+
+    return {
+
+        species,
+
+        [verb](){return sound}
+
+    }
+
+}
