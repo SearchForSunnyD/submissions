@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div>
+        <label for="title">Title: </label><input type="text" id="title" placeholder='ex. Citizen Kane'>
+        <label for="rating">Rating: </label><input id="rating" type="number" min="0" max="10" placeholder="0 to 10">
+        <button id="submit">Submit</button>
+        <select id="sort-select">
+            <option value="title">Sort by Title</option>
+            <option value="rating">Sort by Rating</option>
+        </select>
+        <select id="sort-order">
+            <option value="ascend">highest to lowest</option>
+            <option value="descend">lowest to highest</option>
+        </select>
+        </div>
+    <div id="rate-container"><ul></ul></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
