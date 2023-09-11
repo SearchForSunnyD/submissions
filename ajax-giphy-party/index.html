@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giphy Party!</title>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body class="bg-dark">
+    <div class="container-fluid">
+        <h1 class="text-center text-light">GIPHY PARTY</h1>
+        <form class="col-6 offset-3">
+            <div class="form-group row">
+                <div class="input-group">
+                    <input type="text" id="textBox" class="form-control rounded" placeholder="Enter a search term">
+                    <div class="input-group-append p-1">
+                    <button class="btn btn-secondary" id="search">Search Giphy</button>
+                    <button class="btn btn-danger" id="clear">Remove Results</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container-fluid">
+        <ul id="results" class="row"></ul>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>
