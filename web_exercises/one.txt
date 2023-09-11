@@ -1,0 +1,27 @@
+- What is HTTP?
+    Hyper text transfer protocol is an internet protocol for transmitting and navigation across the world wide web
+- What is a URL?
+    A URL is a unique address to access a resource
+- What is DNS?
+    Its a 'phonebook' for the internet
+- What is a query string?
+    A string sent via request to search by
+- What are two HTTP verbs and how are they different?
+    GET - Pulls data from the server
+    POST - Changes data on the server
+- What is an HTTP request?
+    A request sent to a site
+- What is an HTTP response?
+    The response to the request that was sent
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+    Additional parameters for the site to use to generate a proper response.
+        -Accept-Language
+        -Referer
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+    A request is sent to the site and the site responds with information that the browser can use to generate the webpage.
+
+
+curl -H "Accept: text/plain" https://icanhazdadjoke.com/
+
+172.67.198.173
+104.21.66.15
