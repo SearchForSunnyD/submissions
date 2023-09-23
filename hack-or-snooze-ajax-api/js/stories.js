@@ -144,15 +144,17 @@ $postSubmitForm.on('submit', post)
 /** Toggles a story as being a favorite on the server, webpage and currentUser */
 
 async function toggleFavorite(evt) {
-    console.debug('favorite')
+    console.debug('favorite', evt)
     const $t = evt.target.closest('li')
+    const $i = evt.target.closest('span').childNodes[1]
+
     if (!favorite($t.id)) {
         await addFav($t.id)
     } else {
         await removeFav($t.id)
     }
-    evt.target.closest('i').classList.toggle('fa-regular')
-    evt.target.closest('i').classList.toggle('fa-solid')
+    $i.classList.toggle('fa-regular')
+    $i.classList.toggle('fa-solid')
 
     updateCurrUser()
 }
@@ -198,24 +200,24 @@ function favorite(story) {
 
 /** Shows edit form on click of edit icon */
 
-async function showEditForm(storyId) {
-    hidePageComponents()
+async function showEditForm(evt) {
+    console.debug('edit', evt.target)
+    await hidePageComponents()
+    const storyId = evt.target.closest('li').id
     const response = await axios.get(`${BASE_URL}/stories/${storyId}`)
     const story = new Story(response.data.story)
 
     $editTitle.attr('placeholder', story.title)
     $editAuthor.attr('placeholder', story.author)
     $editUrl.attr('placeholder', story.url)
-    
+
     $editSubmitForm.data('storyId', storyId)
     $editSubmitForm.data('story', story)
 
     $editSubmitForm.show()
 }
 
-$allStoriesList.on('click', 'span.edit-post', (evt) =>
-    showEditForm(evt.target.closest('li').id)
-)
+$allStoriesList.on('click', 'span.edit-post', showEditForm)
 
 /** Edits a post on the server, webpage and from the currentUser local storage. */
 
