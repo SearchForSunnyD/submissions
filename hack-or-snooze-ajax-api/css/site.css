@@ -1,0 +1,140 @@
+/* General typography */
+
+html {
+    background-attachment: fixed;
+    background-image: radial-gradient(#e78a8a, #6eb0f7);
+}
+
+body {
+    font-family: Arimo, sans-serif;
+    margin: 8px 7.5vw;
+}
+
+h1 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+h5 {
+    font-size: 0.9rem;
+    font-weight: lighter;
+}
+
+h6 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Site layout */
+
+/* This is the basic box that the main part of the page goes into */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: #f6f6ef;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Forms */
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin: 8px 18px 0;
+}
+
+form > * {
+    margin: 10px 0;
+}
+
+form label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: flex;
+    text-align: right;
+    padding-bottom: 5px;
+    margin-right: 5px;
+}
+
+form input {
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 2px;
+    padding: 8px;
+    width: 90%;
+    box-shadow: 0 0 3px 1px lightgray;
+}
+
+form input:focus {
+    outline: none;
+    box-shadow: 0 0 4px 1px darkgray;
+}
+
+form button {
+    width: 4rem;
+    position: relative;
+    border: none;
+    margin-left: auto;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 0.85rem;
+    background-color: lightslategray;
+    color: white;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+form button:hover {
+    background-color: dimgray;
+}
+
+form > hr {
+    margin: 0;
+    border: 1px solid lightgray;
+}
+
+button.danger {
+    background-color: lightcoral;
+    width: 100%;
+}
+
+button.danger:hover {
+    background-color: red;
+}
+
+/* responsive queries for tightening things up for mobile. */
+
+@media screen and (max-width: 576px) {
+    body {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    body {
+        max-width: 900px;
+        margin: 8px auto;
+    }
+}
