@@ -1,0 +1,107 @@
+# Fruits
+Apple
+Banana
+Cherry
+Date
+Fig
+Grape
+Honeydew
+Kiwi
+Lemon
+Mango
+Nectarine
+Orange
+Papaya
+Quince
+Raspberry
+Strawberry
+Tomato
+Ugli fruit
+Watermelon
+Blueberry
+Cantaloupe
+Pineapple
+Pomegranate
+Peach
+Pear
+
+# Vegetables
+Artichoke
+Broccoli
+Carrot
+Cucumber
+Eggplant
+Garlic
+Kale
+Lettuce
+Mushroom
+Onion
+Pepper
+Radish
+Spinach
+Tomato
+Zucchini
+Asparagus
+Cabbage
+Cauliflower
+Green beans
+Peas
+Potato
+Rutabaga
+Sweet potato
+Turnip
+Corn
+
+# Proteins
+Beef
+Chicken
+Pork
+Turkey
+Lamb
+Salmon
+Tuna
+Shrimp
+Crab
+Sardines
+Tofu
+Eggs
+Lentils
+Chickpeas
+Black beans
+Quinoa
+Cod
+Trout
+Mussels
+Venison
+Duck
+Bison
+Oysters
+Halibut
+Scallops
+
+# Grains
+Rice
+Wheat
+Barley
+Oats
+Quinoa
+Buckwheat
+Couscous
+Farro
+Millet
+Amaranth
+Bulgur
+Polenta
+Spelt
+Sorghum
+Teff
+Kamut
+Rye
+Flaxseed
+Chia seeds
+Popcorn
+Bread
+Pasta
+Cornmeal
+Wild rice
+Biscuits
