@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static',filename='styles/style.css') }}"
+		/>
+	</head>
+	<body>
+		<nav>
+			<span class="nav-logo">Madlibs</span>
+			<a href="/" class="nav-link">Home</a>
+		</nav>
+		<h3>{% block name %}{% endblock %}</h3>
+		<div class="content-block">{% block content %}{% endblock %}</div>
+		<footer></footer>
+	</body>
+</html>

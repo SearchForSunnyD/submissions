@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block name %}
+<h1>Home</h1>
+{% endblock %} {% block content %}
+<h2>Welcome!</h2>
+<p>Please select from the option below!</p>
+<ul>
+	{% for story in stories %}
+	<a href="/story-form/{{story}}">{{story}}</a>
+	{% endfor %}
+</ul>
+{% endblock %}
