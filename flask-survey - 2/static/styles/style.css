@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+}
+
+.nav-bar {
+	background-color: blue;
+	padding: 10px;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.nav-bar img {
+	height: 8vh;
+}
+
+.nav-link {
+	text-decoration: none;
+	justify-self: center;
+	padding: 10px;
+}
+
+.nav-item {
+	color: aliceblue;
+	padding: 0 20px;
+}
+
+.nav-link:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.button {
+	border: none;
+	border-radius: 5px;
+	color: aliceblue;
+	padding: 10px;
+	background-color: rgba(0, 0, 255, 0.4);
+	text-decoration: none;
+}
+
+.button:hover {
+	color: aliceblue;
+	background-color: blue;
+	cursor: pointer;
+}
+
+.question-form {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	min-width: 40vw;
+}
+
+.text-input {
+	width: 100%;
+}
+
+.messages {
+	list-style-type: none;
+	padding: 15px;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0.2);
+	color: rgba(255, 0, 0, 0.8);
+	border-radius: 10px;
+}
