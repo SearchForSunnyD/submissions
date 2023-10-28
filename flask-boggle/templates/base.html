@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static',filename='styles/style.css') }}"
+		/>
+	</head>
+	<body>
+		<nav class='nav-bar'>
+			<span class="nav-logo nav-item">BOGGLE</span>
+            <div class="scoreboard">
+                <div class="score">
+                    Current Score:
+                    <span id="score">0</span>
+                </div>
+                <div class="high_score">
+                    High Score:
+                    <span id="high_score">
+                        {% with high_score = session.get("high_score", 0)%}
+                            {{high_score}}
+                        {% endwith %}
+                    </span>
+                </div>
+            </div>
+            <a class='nav-item' href="/">HOME</a>
+		</nav>
+		<div class="content-block">{% block content %}{% endblock %}</div>
+    </body>
+</html>

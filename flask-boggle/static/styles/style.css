@@ -1,0 +1,211 @@
+body {
+	margin: 0;
+	background-color: rgb(222, 184, 135);
+	color: rgb(103, 10, 10);
+}
+
+.board-box {
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	overflow: scroll;
+	width: 60vw;
+	height: 60vw;
+}
+
+.game-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+#board {
+	display: flex;
+	flex-direction: row;
+	border: 5px solid rgba(103, 10, 10);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+#not-board {
+	display: flex;
+	border: 5px solid rgba(103, 10, 10);
+	border-radius: 10px;
+	flex-direction: column;
+	padding: 10px;
+	height: 100%;
+}
+
+.block-1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 90px;
+}
+
+.block-1 div {
+	border: 2px solid rgba(103, 10, 10);
+	border-radius: 10px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+#clock {
+	width: 25%;
+}
+
+#messages {
+	width: 75%;
+}
+
+.dupe {
+	background-color: rgba(0, 0, 255, 0.5);
+}
+
+.valid {
+	background-color: rgba(0, 128, 0, 0.5);
+}
+
+.invalid {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+#guesses {
+	min-height: 200px;
+	border: 2px solid rgba(103, 10, 10);
+	border-radius: 10px;
+	overflow-y: scroll;
+}
+
+#guess-form input, #guess-form button{
+    height: 1.35rem;
+    margin-top: 10px;
+}
+
+#not-board ol{
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+	border-radius: 10px;
+	padding: 2px;
+	background-color: rgba(255, 255, 255, 0);
+	color: rgb(103, 10, 10);
+	border: 2px solid rgba(103, 10, 10);
+	outline: rgb(103, 10, 10);
+    padding-left: 10px;
+}
+
+.tile {
+	display: flex;
+	border: 5px solid rgba(103, 10, 10);
+	border-radius: 10px;
+	color: rgb(103, 10, 10);
+	margin: 10px;
+	width: 50px;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+.tile:hover {
+	cursor: default;
+}
+
+.nav-bar {
+	display: flex;
+	background-color: rgb(103, 10, 10);
+	color: rgb(222, 184, 135);
+	height: 10vh;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 2rem;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(222, 184, 135);
+}
+
+a:hover {
+	text-decoration: underline 1.5px;
+}
+
+.nav-item {
+	padding: 20px;
+	margin: 10px;
+}
+
+.scoreboard {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.content-block {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	color: rgba(222, 184, 135, 0.4);
+	background-color: rgba(103, 10, 10, 0.4);
+	text-decoration: none;
+}
+
+button:hover {
+	color: rgb(222, 184, 135);
+	background-color: rgba(103, 10, 10);
+	cursor: pointer;
+}
+
+/* Taken from MDN to style radio buttons*/
+input[type="radio"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	border: 2px solid rgba(103, 10, 10, 0.4);
+	transition: 0.2s all linear;
+	margin-right: 5px;
+	position: relative;
+	top: 4px;
+}
+
+input[type="radio"]:checked {
+	border: 6px solid rgba(103, 10, 10);
+}
+
+.radio {
+	margin-top: 10px;
+}
+
+/* Taken from codepen */
+
+*::-webkit-scrollbar {
+	width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #670a0a;
+	border-radius: 10px;
+	border: 3px solid #ffffff00;
+}

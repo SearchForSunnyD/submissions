@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% block title %}Boggle Board{% endblock %} {% block
+name %}
+<h1>Board</h1>
+{% endblock %} {% block content %}
+<div class="game-wrap">
+	<div id="board">
+		{% for row in session['boggle_board'] %}
+		<div class="row">
+			{% for char in row %}
+			<div class="tile">{{char}}</div>
+			{% endfor %}
+		</div>
+		{% endfor %}
+	</div>
+	<div id="not-board">
+		<div class="block-1">
+			<div id="clock"></div>
+			<div id="messages">Submit words below</div>
+		</div>
+		<form method="GET" id="guess-form" autocomplete="off">
+			<input type="text" id="guess" autofocus />
+			<button>{{'> > >'}}</button>
+		</form>
+		<ol id="guesses"></ol>
+	</div>
+</div>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+<script src="/static/scripts/script.js"></script>
+<script>
+	let game = new BoggleGame(60);
+</script>
+{% endblock %}
