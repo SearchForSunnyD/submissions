@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block title %}User{% endblock %} {% block content
+%}
+<div class="container d-inline-flex p-2">
+	<div
+		class="center-cropped border border-primary rounded"
+		style="background-image: url({{user.img_url}});"
+	></div>
+	<div class="flex-column p-2">
+		<p class="font-weight-bold h2">{{user.full_name}}</p>
+		<div class="d-flex">
+			<a href="/user/{{user.id}}/edit" class="btn btn-primary m-1">Edit</a>
+			<a href="/user/{{user.id}}/delete" class="btn btn-danger m-1">Delete</a>
+		</div>
+	</div>
+</div>
+{% endblock %}
