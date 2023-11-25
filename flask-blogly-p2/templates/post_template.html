@@ -1,0 +1,20 @@
+{% macro render_post(post) %}
+<div
+	class="post-container card d-flex flex-row p-2"
+>
+	<div class="post-info d-flex flex-row w-35">
+		<div
+			class="center-cropped border border-primary rounded"
+			style="background-image: url('{{post.owner.img_url}}');"
+		></div>
+		<div class="data ml-2">
+			<p class="user-name mb-0">By {{post.owner.full_name}}</p>
+			<p class="post-date small">on {{post.post_date}}</p>
+		</div>
+	</div>
+	<div class="pot-contents d-flex flex-column ml-4">
+		<p class="title h3 text-start">{{post.post_title}}</p>
+		<p class="text-body text-start">{{post.post_text}}</p>
+	</div>
+</div>
+{% endmacro %}

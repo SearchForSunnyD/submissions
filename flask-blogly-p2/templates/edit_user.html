@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% block title %}Edit User{% endblock %} {% block
+content %}
+<div class="container">
+	<div class="d-flex">
+		<span class="h2 flex-grow-1">Edit User</span>
+		<form action="/user/{{user.id}}/delete" method="DELETE">
+			<button type="submit" class="btn btn-danger m-2">Delete</button>
+		</form>
+	</div>
+	<form action="/user/{{user.id}}/edit" method="POST" class="mt-4">
+		<div class="form-group">
+			<label for="first_name">First Name</label>
+			<input
+				type="text"
+				class="form-control"
+				name="first_name"
+				placeholder="Enter a first name"
+				value="{{user.first_name}}"
+			/>
+		</div>
+		<div class="form-group">
+			<label for="middle_name">Middle Name</label>
+			<input
+				type="text"
+				class="form-control"
+				name="middle_name"
+				placeholder="Enter a middle name"
+				value="{{user.middle_name}}"
+			/>
+		</div>
+		<div class="form-group">
+			<label for="last_name">Last Name</label>
+			<input
+				type="text"
+				class="form-control"
+				name="last_name"
+				placeholder="Enter a last name"
+				value="{{user.last_name}}"
+			/>
+		</div>
+		<div class="form-group">
+			<label for="img_url">Image URL</label>
+			<input
+				type="text"
+				class="form-control"
+				name="img_url"
+				placeholder="Provide an image of this user"
+				value="{{user.img_url}}"
+			/>
+		</div>
+		<a href="/user/{{user.id}}" class="btn btn-secondary">Cancel</a>
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+</div>
+{% endblock %}

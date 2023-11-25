@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block title %}Post{% endblock %} {% import
+"post_template.html" as macros %} {% block content %}
+<div class="container d-flex flex-column">
+	{{ macros.render_post(post) }}
+	<div class="d-flex justify-content-end">
+		<a href="/post/{{post.id}}/edit" class="btn btn-primary mt-2">Edit</a>
+	</div>
+</div>
+{% endblock %}

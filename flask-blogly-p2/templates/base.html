@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %}{% endblock %}</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="{{ url_for('static',filename='styles/style.css') }}"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark d-flex justify-content-start">
+				<a href="/" class="navbar-brand m-2">Blogly</a>
+				<a href="/" class="nav-item text-light m-2">Home</a>
+				<a href="/users" class="nav-item text-light m-2">Users</a>
+		</nav>
+		<div class="content-block m-2">{% block content %}{% endblock %}</div>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
