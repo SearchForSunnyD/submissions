@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}User{% endblock %}{% import
+"post_template.html" as macros %} {% block content %}
+<div class="container">
+	<div class="container d-inline-flex p-2">
+		<div
+			class="center-cropped border border-primary rounded"
+			style="background-image: url({{user.img_url}});"
+		></div>
+		<div class="flex-column p-2">
+			<p class="font-weight-bold h2">{{user.full_name}}</p>
+			<div class="d-flex">
+				<a href="/user/{{user.id}}/edit" class="btn btn-primary m-1"
+					>Edit</a
+				>
+                <a href="/user/{{user.id}}/post/new" class="btn btn-secondary m-1"
+					>Add Post</a
+				>
+			</div>
+		</div>
+	</div>
+	{% for post in posts %}
+	<div class="card">
+		{{ macros.render_post(post) }}<a
+			href="/post/{{post.id}}"
+			class="stretched-link"
+		></a>
+	</div>
+	{% endfor %}
+</div>
+
+{% endblock %}

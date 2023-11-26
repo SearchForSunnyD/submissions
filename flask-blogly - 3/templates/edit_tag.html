@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Edit Tag{% endblock %} {% block
+content %}
+<div class="container">
+	<div class="d-flex">
+		<span class="h2 flex-grow-1">Edit Tag</span>
+		<form action="/tag/{{tag.id}}/delete" method="DELETE">
+			<button type="submit" class="btn btn-danger m-2">Delete</button>
+		</form>
+	</div>
+	<form action="/tag/{{tag.id}}/edit" method="POST" class="mt-4">
+		<div class="form-group">
+			<label for="tag_name">Tag name</label>
+			<input
+				type="text"
+				class="form-control"
+				name="tag_name"
+				placeholder="Enter a name for the tag"
+				value="{{tag.tag_name}}"
+			/>
+		</div>
+		<a href="/tag/{{tag.id}}/edit" class="btn btn-secondary">Cancel</a>
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+</div>
+{% endblock %}
