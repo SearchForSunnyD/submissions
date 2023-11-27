@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pet.pet_name }} Page{% endblock %}
+
+{% block content %}
+<div class="media">
+    <img src="{{ pet.img_url }}" alt="{{ pet.pet_name }} Image" class="img-thumbnail mr-3" />
+    <div class="media-body">
+        <h5 class="mt-0">
+            Hi! I'm <span class="text-info">{{ pet.pet_name }}</span>, nice to meet you!
+        </h5>
+        <p class="lead">Age: {{ pet.age }}</p>
+        <p class="lead">Species: {{ pet.species }}</p>
+        <p class="lead">
+            Availability: {% if pet.available %}I am available!{% else %}I have been adopted!{% endif %}
+        </p>
+        <p class="lead">Notes: {% if pet.notes %}{{ pet.notes }}{% endif %}</p>
+    </div>
+</div>
+<div class="d-flex spacing">
+    <a href="/pet/{{ pet.id }}/adopt" class="btn btn-success">Adopt</a>
+    <a href="/pet/{{ pet.id }}/edit" class="btn btn-secondary">Edit</a>
+</div>
+{% endblock %}

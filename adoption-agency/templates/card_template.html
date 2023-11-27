@@ -1,0 +1,22 @@
+{% macro render_card(pet) %}
+<div class="card border-info p-0 m-2 col-3">
+    <img
+        src="{{ pet.img_url }}"
+        alt="{{ pet.pet_name }} Image"
+        class="card-img-top border-bottom border-info mh-50"
+    />
+    <div class="card-body">
+        <h5>
+            <span class="text-info">{{ pet.pet_name }}</span>
+            {% if pet.available %}
+                <span class="small text-success">is available!</span>
+            {% else %}
+                <span class="small text-warning">has been adopted!</span>
+            {% endif %}
+        </h5>
+    </div>
+    <div class="card-footer">
+        <a href="/pet/{{ pet.id }}" class="badge badge-info p-2">View Details</a>
+    </div>
+</div>
+{% endmacro %}

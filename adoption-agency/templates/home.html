@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% import
+"card_template.html" as macros %} {% block content %} {% for availability, title
+in [('Available', 'Available Pets:'), ('Adopted', 'Adopted Pets:')] %}
+<h1>{{ title }}</h1>
+<div class="container row">
+	{% for pet in pets %} {% if (availability == 'Available' and pet.available)
+	or (availability == 'Adopted' and not pet.available) %} {{
+	macros.render_card(pet) }} {% endif %} {% endfor %}
+</div>
+{% endfor %} {% endblock %}
