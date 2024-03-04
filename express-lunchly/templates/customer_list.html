@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Customers{% endblock %}
+{% block content %}
+  <a class="btn btn-primary" style="float: right" href="/add/">Add a Customer</a>
+</p>
+<h1>Customers</h1>
+<form action="/search" class="pb-4">
+  <input type="search" class="bg-dark text-light" placeholder="Filter" name="q" id="q">
+  <input type="submit" class="bg-dark text-light" value="Filter">
+</form>
+<ul style="column-count: 4">
+  {% if customers %}
+    {% for customer in customers %}
+      <li>
+        <a href="/{{ customer.id }}/">{{ customer.fullname() }}</a>
+      </li>
+    {% endfor %}
+  {% else %}
+    <li>No customers found</li>
+  {% endif %}
+</ul>
+{% endblock %}
