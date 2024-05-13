@@ -1,0 +1,9 @@
+.todo button{
+  background-color: transparent;
+}
+
+.todo{
+  border: blue solid 1px;
+  border-radius: 1em;
+  text-align: left;
+}

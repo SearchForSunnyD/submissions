@@ -1,0 +1,10 @@
+.box{
+  margin: 10px;
+  border-radius: 1em;
+  text-align: end;
+}
+
+.box button{
+  background-color: transparent;
+}
+
