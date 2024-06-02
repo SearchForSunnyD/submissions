@@ -1,0 +1,14 @@
+{
+  "chips": {
+    "name": "chips",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzDlnoXVbI4v9n1tHvVy-IJnX75asjbxURbA&s"
+  },
+  "chocolate": {
+    "name": "chocolate",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaEgBTij4mi4VYEyzWLwtkhe2P49v7mJ7Guw&s"
+  },
+  "gum": {
+    "name": "gum",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZT2fu7nrpSOU4YMMA8n856lfnR6-tUXYUlQ&s"
+  }
+}

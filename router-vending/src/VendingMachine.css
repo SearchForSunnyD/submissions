@@ -1,0 +1,17 @@
+.vending-machine {
+  border: 1px solid burlywood;
+  border-radius: 10px;
+  height: 60vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.vending-machine a{
+  height: 100%;
+}
+
+.vending-machine a button{
+  height: 100%;
+  width: 100%;
+}
