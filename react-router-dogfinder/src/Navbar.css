@@ -1,0 +1,18 @@
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 5vh;
+  width: 100%;
+  background-color: brown;
+}
+
+nav a{
+  border: 1px solid chartreuse;
+  color: chartreuse;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0 10px;
+}
